@@ -195,3 +195,40 @@ body {
 .feedback-form input[type="submit"]:active {
     background-color: #333333;
 }
+
+/*Forms*/
+.form{
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.form h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form textarea,
+.form input{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+
+.form button{
+    background-color: #555555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+}
