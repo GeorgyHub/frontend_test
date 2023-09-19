@@ -7,6 +7,39 @@
     <meta charset="utf-8">
 </head>
 <body>
+
+<div class="modal" id="user-modal">
+    <div class="modal-content">
+        <span class="close">X</span>
+        <h2>Создать пользователя</h2>
+        <form action="#" class="" id="">
+            <label for="user-full-name">ФИО:</label>
+            <input type="text" id="user-full-name" name="user-full-name" required>
+
+            <label for="user-phone">Телефон:</label>
+            <input type="tel" id="user-phone" name="user-phone" required>
+
+            <label for="user-email">Email:</label>
+            <input type="email" id="user-email" name="user-email" required>
+
+            <label for="user-login">Логин:</label>
+            <input type="text" id="user-login" name="user-login" required>
+
+            <label for="user-password">Логин:</label>
+            <input type="password" id="user-password" name="user-password" required>
+
+            <label for="user-group">Группа пользователя</label>
+            <select name="user-group" id="user-group" required>
+                <option value="">Выберите группу</option>
+                <option value="admin">Администратор</option>
+                <option value="user">Пользователь</option>
+            </select>
+
+            <button>Создать</button>
+        </form>
+    </div>
+</div>
+    
 <div class="container">
     <div class="header">
         <ul class="menu">
@@ -14,6 +47,7 @@
             <li><a href="#">Новости</a></li>
             <li><a href="#">О нас</a></li>
             <li><a href="#">Контакты</a></li>
+            <li><a id="open-create-user" href="#">Создать пользователя</a></li>
         </ul>
     </div>
 
@@ -94,6 +128,16 @@
             infinite: true,
             prevArrow: '<div class="slick-btn-own slick-prev">&#8592;</div>',
             nextArrow: '<div class="slick-btn-own slick-next">&#8594;</div>'
+        });
+    });
+
+    $(document).ready(function(){
+        $("#open-create-user").click(function(){
+            $("#user-modal").fadeIn(200);
+        });
+
+        $(".close").click(function(){
+            $("#user-modal").fadeOut(200);
         });
     });
 </script>
